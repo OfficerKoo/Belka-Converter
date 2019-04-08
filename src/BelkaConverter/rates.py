@@ -10,3 +10,9 @@ def get_rates():
     rates = json.loads(r.data.decode('utf-8'))
     return rates
 
+def exchange(base, cur1, cur2, scale):
+    if base == 'BYN':
+        result = cur1 / cur2 * scale
+    else:
+        result = cur2 * cur1 / scale
+    return result

@@ -5,8 +5,7 @@ def create_parser():
     pos_group = parser.add_argument_group()
     pos_group.add_argument('amount', 
      type=float, 
-     help='Enter the ammount of currency to convert', 
-     required=True
+     help='Enter the ammount of currency to convert'
      )
     pos_group.add_argument('currency', default=['BYN', 'RUB'],
      nargs=2, metavar=('CUR1','CUR2'), 
@@ -24,8 +23,8 @@ def main():
           if obj['Cur_Abbreviation'] in args.currency:
                curs.append(obj)
      if args.currency[0] == 'BYN':
-          result = args.ammount / curs[0]['Cur_OfficialRate'] * curs[0]['Cur_Scale']
+          result = args.amount / curs[0]['Cur_OfficialRate'] * curs[0]['Cur_Scale']
      else:
-          result = curs[0]['Cur_OfficialRate'] * args.ammount / curs[0]['Cur_Scale']
+          result = curs[0]['Cur_OfficialRate'] * args.amount / curs[0]['Cur_Scale']
 
-     print(f"For {args.ammount} of {args.currency[0]} you get {result} of {args.currency[1]}")
+     print(f"For {args.amount} of {args.currency[0]} you get {result} of {args.currency[1]}")

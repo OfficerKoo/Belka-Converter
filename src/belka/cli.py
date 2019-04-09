@@ -14,7 +14,7 @@ def create_parser():
     return parser
 
 def main():
-     from BelkaConverter import rates
+     from belka import rates
 
      args = create_parser().parse_args()
      rates = rates.get_rates()
@@ -23,8 +23,8 @@ def main():
           if obj['Cur_Abbreviation'] in args.currency:
                curs.append(obj)
      if args.currency[0] == 'BYN':
-          result = args.amount / curs[0]['Cur_OfficialRate'] * curs[0]['Cur_Scale']
+          result = round(args.amount / curs[0]['Cur_OfficialRate'] * curs[0]['Cur_Scale'], ndigits=2)
      else:
-          result = curs[0]['Cur_OfficialRate'] * args.amount / curs[0]['Cur_Scale']
+          result = round(curs[0]['Cur_OfficialRate'] * args.amount / curs[0]['Cur_Scale'], ndigits=2)
 
      print(f"For {args.amount} of {args.currency[0]} you get {result} of {args.currency[1]}")

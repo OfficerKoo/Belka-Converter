@@ -12,5 +12,10 @@ setup(
     author_email='charmakesthingsawesome@gmail.com',
     packages=find_packages('src'),
     packages_dir={'':'src'},
-    install_requires=[]
+    install_requires=['urllib3'],
+    entry_points={
+        'console_scripts': [
+            'belka=belka.cli:main',
+            ]
+    }
 )

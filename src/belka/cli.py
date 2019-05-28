@@ -18,10 +18,7 @@ def main():
 
      args = create_parser().parse_args()
      rates = rates.get_rates()
-     curs = []
-     for obj in rates:
-          if obj['Cur_Abbreviation'] in args.currency:
-               curs.append(obj)
+     curs = [obj for obj in rates if obj['Cur_Abbreviation'] in args.currency]
      if args.currency[0] == 'BYN':
           result = round(args.amount / curs[0]['Cur_OfficialRate'] * curs[0]['Cur_Scale'], ndigits=2)
      else:

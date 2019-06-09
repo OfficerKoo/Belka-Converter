@@ -8,7 +8,7 @@ def create_parser():
      help='Enter the ammount of currency to convert'
      )
     pos_group.add_argument('currency', default=['BYN', 'RUB'],
-     nargs=2, metavar=('CUR1','CUR2'), 
+     nargs=2, metavar=('CUR1','CUR2'), type=str.upper,
      help='Enter the currencies to convert like so from CUR1 to CUR2, default is BYN to RUB',
      )
     return parser

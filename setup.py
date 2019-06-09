@@ -5,7 +5,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='belka',
-    version='0.4.20',
+    version='0.4.40',
     description='Simple currency converter for BYN',
 #    long_description=readme,
     author='OfficerKoo',

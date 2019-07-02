@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 with open('README.rst', 'r') as f:
-    readme = f.open()
+    readme = f.read()
 
 setup(
     name='belka',

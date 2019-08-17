@@ -1,11 +1,11 @@
 from setuptools import setup, find_packages
 
 with open('README.rst', 'r') as f:
-    readme = f.open()
+    readme = f.read()
 
 setup(
     name='belka',
-    version='0.4.40',
+    version='0.5.0',
     description='Simple currency converter for BYN',
     long_description=readme,
     author='OfficerKoo',

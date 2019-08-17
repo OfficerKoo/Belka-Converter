@@ -6,10 +6,8 @@ Description
 ------------
 
 Works from command-line with synthaxis like 
-``belka [amount] [CUR1] [CUR2]``
-    BYN RUB is selected by default
+``belka [-h] [-f FILE] [-u] amount [CUR1 [CUR2 ...]]``
+    BYN RUB is selected by default, can save rates to file, and update it from web.
 
 Installation:
-    #. Download
-    #. Run setup.py install
-
+    #. ``pip install git+https://github.com/OfficerKoo/Belka-Converter.git@<version>``

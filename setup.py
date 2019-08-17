@@ -5,7 +5,7 @@ with open('README.rst', 'r') as f:
 
 setup(
     name='belka',
-    version='0.4.40',
+    version='0.5.00',
     description='Simple currency converter for BYN',
     long_description=readme,
     author='OfficerKoo',
